@@ -77,7 +77,7 @@ const Header = () => {
           </svg>
         </button>
         <ul className="space-y-6 text-xl text-dark-gray-primary font-raleway">
-          <li className="border-b-4 border-gray-70 hover:border-color-third"><a href="#quem-somos">Quem somos</a></li>
+          <li className="border-b-4 border-gray-70 hover:border-color-third"><a href="#quem-somos">Quasdsadem somos</a></li>
           <li className="border-b-4 border-gray-70 hover:border-color-third"><a href="#solucoes">Soluções</a></li>
           <li className="border-b-4 border-gray-70 hover:border-color-third"><a href="#contato">Contato</a></li>
           <li className="border-b-4 border-gray-70 hover:border-color-third"><Link to="/suporte">Suporte</Link></li>
