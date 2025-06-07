@@ -11,6 +11,7 @@ import Solucoes from "../pages/Solucoes";
 import Painel from "../pages/Painel";
 import Login from "../pages/Login";
 import PrivateRoute from "../components/Auth";
+import Rafael from "../pages/Produto/Rafael";
 
 function App() {
   
@@ -25,6 +26,7 @@ function App() {
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/suporte" element={<Suporte />} />
             <Route path="/solucoes" element={<Solucoes />} />
+            <Route path="/rafael" element={<Rafael />} />
             <Route path="/painel" element={
               <PrivateRoute>
                 <Painel />
