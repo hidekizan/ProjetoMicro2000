@@ -1,22 +1,21 @@
 import React from 'react';
 import './header.css';
+import logo from '../imagens/logo-micro2000.png';
 
 function Header() {
   const mostrarConteudo = (pagina) => {
     console.log('Mostrar conteúdo:', pagina);
-    // aqui você pode fazer navegação ou exibir algum modal depois
   };
 
   const toggleMenu = (menu) => {
     console.log('Abrir menu:', menu);
-    // lógica pra mostrar/esconder menu
   };
 
   return (
     <>
       <section className="section-1">
         <div className="logo">
-          <img className="imagem" src="./components/logo-micro2000.png" alt="logo" />
+          <img className="imagem" src={logo} alt="logo" />
         </div>
 
         <div className="search-bar">
