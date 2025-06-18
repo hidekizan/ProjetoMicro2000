@@ -10,6 +10,7 @@ import Solucoes from "../pages/Solucoes";
 import Login from "../pages/Login";
 import PrivateRoute from "../components/Auth";
 import Servicos from "../pages/Servicos";
+import Cadastro from "../pages/Cadastro";
 
 function App() {
   
@@ -26,7 +27,7 @@ function App() {
             <Route path="/solucoes" element={<Solucoes />} />
             <Route path="/servicos" element={<Servicos />} />
             <Route path="/login" element={<Login />} />
-
+            <Route path="/cadastro" element={<Cadastro />} />
           </Routes>
         </main>
         <Footer />
