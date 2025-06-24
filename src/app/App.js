@@ -11,7 +11,7 @@ import Login from "../pages/Login";
 import PrivateRoute from "../components/Auth";
 import Servicos from "../pages/Servicos";
 import Cadastro from "../pages/Cadastro";
-
+import Rafael from "../pages/Produto/Rafael";
 
 function App() {
   
@@ -27,10 +27,11 @@ function App() {
             <Route path="/suporte" element={<Suporte />} />
             <Route path="/solucoes" element={<Solucoes />} />
             <Route path="/servicos" element={<Servicos />} />
+            <Route path="/produtos" element={<Rafael />} />
             <Route path="/painel" element={
-              <PrivateRoute>
+              {/*<PrivateRoute>
                 <Painel />
-              </PrivateRoute>
+              </PrivateRoute>*/}
             } />
             <Route path="/login" element={<Login />} />
             <Route path="/cadastro" element={<Cadastro />} />
