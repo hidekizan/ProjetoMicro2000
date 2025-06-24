@@ -12,6 +12,7 @@ import PrivateRoute from "../components/Auth";
 import Servicos from "../pages/Servicos";
 import Cadastro from "../pages/Cadastro";
 
+
 function App() {
   
   
@@ -26,6 +27,11 @@ function App() {
             <Route path="/suporte" element={<Suporte />} />
             <Route path="/solucoes" element={<Solucoes />} />
             <Route path="/servicos" element={<Servicos />} />
+            <Route path="/painel" element={
+              <PrivateRoute>
+                <Painel />
+              </PrivateRoute>
+            } />
             <Route path="/login" element={<Login />} />
             <Route path="/cadastro" element={<Cadastro />} />
           </Routes>
