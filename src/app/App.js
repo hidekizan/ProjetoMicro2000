@@ -25,6 +25,11 @@ function App() {
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/suporte" element={<Suporte />} />
             <Route path="/solucoes" element={<Solucoes />} />
+            <Route path="/painel" element={
+              <PrivateRoute>
+                <Painel />
+              </PrivateRoute>
+            } />
             <Route path="/servicos" element={<Servicos />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cadastro" element={<Cadastro />} />

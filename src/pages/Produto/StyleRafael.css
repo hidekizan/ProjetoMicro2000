@@ -1,0 +1,354 @@
+/*Menu _______________________________________Aqui*/
+
+.barra-do-menu {
+    margin: 0px 0px 100px 0px;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(233, 235, 235);
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.barra-do-menu a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+.icone-menu {
+    margin-top: 50px;
+    border-radius: 5px;
+    height: 50px;
+    width: 30%;
+    background: linear-gradient(135deg, #04179B, #0125BA, #0085F1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.15s ease;
+    box-shadow: 0 4px 8px rgba(4, 23, 155, 0.6);
+    padding: 0 18px;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.icone-menu svg {
+    width: 24px;
+    height: 24px;
+    fill: #e0e7ff;
+    transition: fill 0.4s ease, transform 0.4s ease;
+}
+
+.icone-menu svg:last-child {
+    margin-left: auto;
+    transition: transform 0.4s ease;
+}
+
+.icone-menu p {
+    margin: 0 5px;
+    color: #e0e7ff;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.03em;
+    user-select: none;
+}
+
+.icone-menu:hover {
+    background: linear-gradient(135deg, #0125BA, #0085F1, #04179B);
+    box-shadow: 0 8px 15px rgba(0, 133, 241, 0.8);
+}
+
+.icone-menu:hover svg {
+    fill: #cce4ff;
+}
+
+.icone-menu:hover svg:last-child {
+    transform: translateX(4px);
+}
+
+.icone-menu:hover p {
+    color: #cce4ff;
+}
+
+.icone-menu:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 6px rgba(0, 133, 241, 0.7);
+    transition: transform 0.05s ease;
+}
+
+.caixa-menu {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    gap: 280px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu ul {
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.menu li a:hover {
+    color: blue;
+}
+
+/*__________________*/
+
+/*area dos produtos e filto*/
+
+.area-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 20px;
+}
+
+
+/*filtro de pesquisa*/
+.area-filtro {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.area-filtro h3 {
+    margin-bottom: 20px;
+}
+
+.btn-fechar {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.caixa-filtro {
+    position: fixed;
+    top: 0;
+    left: -365px;
+    width: 17%;
+    height: 96vh;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+
+    transition: left 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+     z-index: 10;
+}
+
+.caixa-filtro.active {
+    left: 0;
+}
+
+.area-filtro {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;       /* altura máxima da viewport */
+    width: 100%;
+    overflow-y: auto;    /* barra de rolagem vertical se ultrapassar altura */
+    scrollbar-width: thin;
+    scrollbar-color: #838383 #d3d3d3;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Mantém o título com margem */
+.area-filtro h3 {
+    margin-bottom: 20px;
+}
+
+.filtro-produtos {
+    width: 100%;
+    max-height: 100vh; 
+    background-color: #838383;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #838383 #d3d3d3;
+}
+
+.filtro-produtos details .conteudo {
+  max-height: 150px;
+  overflow-y: auto; 
+  scrollbar-width: thin;
+  scrollbar-color: #838383 #d3d3d3;
+  padding-right: 10px; 
+}
+
+.filtro-produtos::-webkit-scrollbar {
+    width: 8px;
+}
+
+.filtro-produtos::-webkit-scrollbar-track {
+    background-color: #d3d3d3;
+    border-radius: 10px;
+}
+
+.filtro-produtos::-webkit-scrollbar-thumb {
+    background-color: #838383;
+    border-radius: 10px;
+}
+
+.filtro-produtos details {
+    margin-bottom: 10px;
+}
+
+.filtro-produtos summary {
+    cursor: pointer;
+    padding: 5px;
+    background-color: #ddd;
+}
+
+.filtro-produtos .conteudo {
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.filtro-de-valores {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.slider-container {
+            width: 300px;
+            position: relative;
+        }
+
+.range-slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #ddd;
+    height: 5px;
+    position: absolute;
+    top: 15px;
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.range-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background-color: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-track {
+    position: absolute;
+    height: 5px;
+    background-color: #007bff;
+    top: 15px;
+    z-index: 1;
+}
+
+.values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+/*__________________________________*/
+
+/*area dos produtos*/
+.caixa-produto {
+    padding: 50px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: #d3d3d3;
+    gap: 20px;
+    justify-content: center;
+    margin: 0;
+    position: relative;
+}
+
+.produtos {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.produto img {
+    width: 200px;
+    height: 250px;
+    margin-bottom: 50px;
+}
+
+.produto p {
+    margin-bottom: 50px;
+}
+
+.formas-de-pagamento {
+    display: flex;
+}
+
+.formas-de-pagamento svg {
+    height: 35px;
+    width: 35px;
+    margin: 10px;
+}
+
+.formas-de-pagamento h3 {
+    margin: 10px;
+}
+/*_____________________________________________*/
+
