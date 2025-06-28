@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Cadastro from "../pages/Cadastro";
 import Servicos from "../pages/Servicos";
 import LayoutPadrao from "../app/LayoutPadrao";
+import Rafael from "../pages/Produto/Rafael";
 
 function App() {
   return (
@@ -27,6 +28,33 @@ function App() {
         <Route path="/cadastro" element={<Cadastro />} />
 
       </Routes>
+      <div className="Content flex min-h-screen flex-col">
+        <Header/>
+        <main className="flex flex-grow container mx-auto p-4 mt-[100px]">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sobre" element={<Sobre />} />
+            <Route path="/suporte" element={<Suporte />} />
+            <Route path="/solucoes" element={<Solucoes />} />
+            <Route path="/painel" element={
+              <PrivateRoute>
+                <Painel />
+              </PrivateRoute>
+            } />
+            <Route path="/servicos" element={<Servicos />} />
+            <Route path="/produtos" element={<Rafael />} />
+            <Route path="/painel" element={
+              {/*<PrivateRoute>
+                <Painel />
+              </PrivateRoute>*/}
+            } />
+            <Route path="/login" element={<Login />} />
+            <Route path="/cadastro" element={<Cadastro />} />
+          </Routes>
+        </main>
+        <Footer />
+        
+      </div>
     </BrowserRouter>
   );
 }
