@@ -1,12 +1,4 @@
-*{
-  margin: 0; 
-  padding: 0;
-  border: 0; 
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-body{
+.secao-body {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -14,7 +6,7 @@ body{
   justify-content: center;
 }
 
-body::before {
+.secao-body::before {
   content: "";
   position: absolute;
   top: -10px;
