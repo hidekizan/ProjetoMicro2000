@@ -1,9 +1,12 @@
-import './style.css'
+import '../pagescss/Home.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import React from "react";
-import
+import banner1 from '../components/imagens/banner1.png';
+import banner2 from '../components/imagens/banner2.png';
+import banner3 from '../components/imagens/banner3.png';
+
 
 function Home() {
   
@@ -16,41 +19,16 @@ function Home() {
     }
 
     return(
-      <section className="gallery-container">
-            <div className="gallery-product-service"> 
+      <section className='w-full h-full'>
           
-              <div className="product-block">
-                <div className="product-title">
-                  <h2>Produtos</h2>
-                  <p className="product-text">Conheça nossa linha de produtos, de novos a recondicionados</p>
-                </div>
-                <div>
-                  <div className="slider-images" id="slider-produtos">
+              
+                  <div className="" id="slider-produtos">
                   <Slider {...config}>
-                    <img src="img/controle_lg.avif" alt="Imagem 1"/>
-                    <img src="img/kit_tintas_T504.JPG" alt="Imagem 2"/>
-                    <img src="img/kit_tintas_T544.jpg.webp" alt="Imagem 3"/>
+                    <img src={banner1} alt="banner 1"/>
+                    <img src={banner2} alt="banner 2"/>
+                    <img src={banner3} alt="banner 3"/>
                   </Slider>
                   </div>
-                </div>
-              </div>
-              <div className="service-block">
-                <div className="service-title">
-                  <h1>Serviços</h1>
-                  <p className="service-text">Conheça os principais serviços que oferecemos</p>
-                </div>
-                <div>
-                  <div className="slider-images2" id="slider-servicos">
-                  <Slider {...config}>
-                    <img src="img/servicos1.jpeg" alt="Imagem 4"/>
-                    <img src="img/servicos2.jpeg" alt="Imagem 5"/>
-                    <img src="img/servicos3.jpeg" alt="Imagem 6"/>
-                    </Slider>
-                  </div>
-                </div>
-              </div>
-          
-            </div>
           </section>
     );
 }

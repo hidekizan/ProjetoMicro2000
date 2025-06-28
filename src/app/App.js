@@ -20,7 +20,7 @@ function App() {
     <BrowserRouter>
       <div className="Content flex min-h-screen flex-col">
         <Header/>
-        <main className="flex flex-grow container mx-auto p-4 mt-[100px]">
+        <main className="flex flex-grow container mx-auto ">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />
