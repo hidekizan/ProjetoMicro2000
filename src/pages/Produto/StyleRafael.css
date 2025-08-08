@@ -133,22 +133,13 @@
     margin-bottom: 20px;
 }
 
-.btn-fechar {
-    background-color: #f44336;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
 
 .caixa-filtro {
     position: fixed;
-    top: 0;
-    left: -365px;
+    bottom: 0;
+    left: 0;
     width: 17%;
-    height: 96vh;
+    height: 80vh;
     background-color: #d3d3d3;
     border-radius: 10px;
     padding: 20px;
@@ -158,7 +149,8 @@
     display: flex;
     flex-direction: column;
     margin-right: 100px;
-     z-index: 10;
+     z-index: 9999;
+     box-sizing: border-box;
 }
 
 .caixa-filtro.active {
@@ -192,12 +184,20 @@
     scrollbar-color: #838383 #d3d3d3;
 }
 
-.filtro-produtos details .conteudo {
+.filtro-produtos .conteudo {
   max-height: 150px;
   overflow-y: auto; 
   scrollbar-width: thin;
   scrollbar-color: #838383 #d3d3d3;
-  padding-right: 10px; 
+  padding-left: 0;
+  margin-left: 0; 
+}
+
+.filtro-produtos .conteudo label {
+  display: block;       /* cada label em linha própria */
+  text-align: left;     /* texto alinhado à esquerda */
+  margin: 0;            /* sem margem que afaste */
+  padding: 2px 0;
 }
 
 .filtro-produtos::-webkit-scrollbar {
@@ -225,7 +225,7 @@
 }
 
 .filtro-produtos .conteudo {
-    padding: 10px;
+    padding: 2px 5px;
     background-color: #eee;
     border-radius: 5px;
 }
@@ -233,6 +233,8 @@
 .conteudo {
     display: flex;
     flex-direction: column;
+    align-items: unset;
+    gap: 0 !important;
 }
 
 .filtro-de-valores {
