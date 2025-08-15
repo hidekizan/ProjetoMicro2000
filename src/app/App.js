@@ -3,14 +3,14 @@ import { useMemo } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "../pages/Home";
+import Home from "../pages/Home/Home";
 import Sobre from "../pages/Sobre";
 import Suporte from "../pages/Suporte";
 import Solucoes from "../pages/Solucoes";
 import Login from "../pages/Login";
 import PrivateRoute from "../components/Auth";
 import Servicos from "../pages/Servicos";
-
+//AQUI ESTAO AS ROTAS
 function App() {
   
   
@@ -26,7 +26,7 @@ function App() {
             <Route path="/solucoes" element={<Solucoes />} />
             <Route path="/servicos" element={<Servicos />} />
             <Route path="/login" element={<Login />} />
-
+            
           </Routes>
         </main>
         <Footer />

@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+.images
+{   height: 100%;
+    width: 100%;
+}
+
+.images-galery
+{
+    height: 100px;
+    width: 100%;
+    display:flex;
+    padding-left:4rem;
+    padding-right: 4rem;
+    border-bottom: 1px solid #CCC;
+    box-shadow: 0 4px 6px -6px #AAA;
+}

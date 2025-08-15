@@ -1,6 +1,5 @@
 import React from 'react';
 import './header.css';
-import logo from '../imagens/logo-micro2000.png';
 
 function Header() {
   const mostrarConteudo = (pagina) => {
@@ -15,7 +14,7 @@ function Header() {
     <>
       <section className="section-1">
         <div className="logo">
-          <img className="imagem" src={logo} alt="logo" />
+          <img className="imagem" src= "/imagens/logo-micro2000.png" alt="logo" />
         </div>
 
         <div className="search-bar">
