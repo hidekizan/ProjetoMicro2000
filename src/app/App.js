@@ -1,14 +1,11 @@
-
-import { useMemo } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../Header/index";
+import Footer from "../Footer/index";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Sobre from "../pages/Sobre";
 import Suporte from "../pages/Suporte";
 import Solucoes from "../pages/Solucoes";
 import Login from "../pages/Login";
-import PrivateRoute from "../components/Auth";
 import Servicos from "../pages/Servicos";
 import Cadastro from "../pages/Cadastro";
 import Rafael from "../pages/Produto/Rafael";
