@@ -10,7 +10,13 @@ import Solucoes from "../pages/Solucoes";
 import Login from "../pages/Login";
 import PrivateRoute from "../components/Auth";
 import Servicos from "../pages/Servicos";
+<<<<<<< HEAD
 //AQUI ESTAO AS ROTAS
+=======
+import Cadastro from "../pages/Cadastro";
+import Rafael from "../pages/Produto/Rafael";
+
+>>>>>>> 20dcee2830693cf35ad421d1b270f22d415748f6
 function App() {
   
   
@@ -25,8 +31,18 @@ function App() {
             <Route path="/suporte" element={<Suporte />} />
             <Route path="/solucoes" element={<Solucoes />} />
             <Route path="/servicos" element={<Servicos />} />
+            <Route path="/produtos" element={<Rafael />} />
+            <Route path="/painel" element={
+              {/*<PrivateRoute>
+                <Painel />
+              </PrivateRoute>*/}
+            } />
             <Route path="/login" element={<Login />} />
+<<<<<<< HEAD
             
+=======
+            <Route path="/cadastro" element={<Cadastro />} />
+>>>>>>> 20dcee2830693cf35ad421d1b270f22d415748f6
           </Routes>
         </main>
         <Footer />

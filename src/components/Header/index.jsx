@@ -11,7 +11,7 @@ function Header() {
   };
 
   return (
-    <>
+    <header className="header-container">
       <section className="section-1">
         <div className="logo">
           <img className="imagem" src= "/imagens/logo-micro2000.png" alt="logo" />
@@ -37,7 +37,6 @@ function Header() {
           </div>
         </div>
 
-        {/* HOME E ENTRAR */}
         <div className="home-entrar">
           <ul className="link-home">
             <li onClick={() => mostrarConteudo('home')}>Cadastre-se</li>
@@ -47,25 +46,15 @@ function Header() {
       </section>
 
       <section className="section-2">
-        <div className="menu-item">
-          <ul className="ul-section" onClick={() => toggleMenu('produtos-menu')}>
-            <li>Produtos</li>
-          </ul>
-        </div>
-
-        <div className="menu-item">
-          <ul className="ul-section" onClick={() => toggleMenu('servicos-menu')}>
-            <li>Serviços</li>
-          </ul>
-        </div>
-
-        <div className="menu-item">
-          <ul className="ul-section" onClick={() => toggleMenu('assistencia-menu')}>
-            <li>Assistência técnica</li>
-          </ul>
-        </div>
+        {['Produtos', 'Serviços', 'Assistência técnica'].map((item, i) => (
+          <div className="menu-item" key={i}>
+            <ul className="ul-section" onClick={() => toggleMenu(`${item.toLowerCase().replace(/ /g, '-')}-menu`)}>
+              <li>{item}</li>
+            </ul>
+          </div>
+        ))}
       </section>
-    </>
+    </header>
   );
 }
 

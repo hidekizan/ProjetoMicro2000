@@ -4,7 +4,9 @@
     display: flex;
     flex-direction: column;
     border-top: 1px solid black;
+    background-color: #FFFFFF;
     margin-top: 60px;
+    z-index: 9999;
   }
   
   .footer-content {
