@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
 import './StyleRafael.css';
 import React, { useState } from 'react';
 
 function Rafael () {
     const produtos = [
-        { id: 1, img: "../img/midia/empresa1.png", descricao: "Descrição do Produto 1" },
-        { id: 2, img: "../img/midia/empresa2.png", descricao: "Descrição do Produto 2" },
-        { id: 3, img: "../img/midia/empresa3.png", descricao: "Descrição do Produto 3" },
-        { id: 4, img: "../img/midia/empresa4.png", descricao: "Descrição do Produto 4" },
-        { id: 5, img: "../img/midia/empresa5.png", descricao: "Descrição do Produto 5" },
-        { id: 6, img: "../img/midia/empresa6.png", descricao: "Descrição do Produto 6" },
+        { id: 1, img: "/imgprodutos/monitor01.jpg", descricao: "Descrição do Produto 1" },
+        { id: 2, img: "/imgprodutos/monitor02.jpg", descricao: "Descrição do Produto 2" },
+        { id: 3, img: "/imgprodutos/mouse-branco-01.jpg", descricao: "Descrição do Produto 3" },
+        { id: 4, img: "/imgprodutos/tecladoGamer01.png", descricao: "Descrição do Produto 4" },
+        { id: 5, img: "/imgprodutos/tecladoGamer02.png", descricao: "Descrição do Produto 5" },
+        { id: 6, img: "/imgprodutos/tecladoGamerVerde01.png", descricao: "Descrição do Produto 6" },
       ];
       
     
@@ -102,7 +103,6 @@ function Rafael () {
                         
                     {/* Filtro de valores */}
                     <div className="filtro-de-valores">
-                        
                             <legend>Valores</legend>
                             <div className="slider-container">
                                 <input type="range" className="range-slider" id="minRange" min="0" max="70000" value="0"/>
@@ -113,17 +113,17 @@ function Rafael () {
                                     <span id="maxValue">R$ 70.000,00</span>
                                 </div>
                             </div>
-                        
                     </div>
-                    
                 </div>
                     {/* Produtos */}
                     <section className="caixa-produto">
                         <div className="produtos">
                             {produtos.map((produto) => (
                             <div key={produto.id} className="produto">
-                                <img src={produto.img} alt={`Produto ${produto.id}`} />
-                                <p>{produto.descricao}</p>
+                                <Link to={`/produtos/${produto.id}`}>
+                                    <img src={produto.img} alt={`Produto ${produto.id}`} />
+                                    <p>{produto.descricao}</p>
+                                </Link>
 
                                 <div className="formas-de-pagamento">
                                 {/* SVG do pix */}
