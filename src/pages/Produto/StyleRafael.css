@@ -1,5 +1,4 @@
 /*Menu _______________________________________Aqui*/
-
 .barra-do-menu {
     margin: 0px 0px 100px 0px;
     width: 100%;
@@ -296,59 +295,75 @@
 .caixa-produto {
     padding: 50px;
     display: flex;
-    height: 100%;
     width: 100%;
     background-color: #d3d3d3;
-    gap: 20px;
     justify-content: center;
     margin: 0;
-    position: relative;
 }
 
 .produtos {
     display: flex;
-    gap: 50px;
     flex-wrap: wrap;
-    align-items: center;
+    gap: 40px; /* reduzi um pouco pra ficar mais coeso */
     justify-content: center;
 }
 
 .produto {
     display: flex;
     flex-direction: column;
-    height: 400px;
-    width: 300px;
-    background-color: rgb(255, 255, 255);
-    padding: 40px;
-
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* distribui melhor */
+    height: 420px;
+    width: 280px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
 }
 
+.produto:hover {
+    transform: scale(1.03); /* efeito hover */
+}
 
-
+/* imagens padronizadas */
 .produto img {
-    width: 200px;
-    height: 250px;
-    margin-bottom: 50px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* mantém proporção */
+    margin-bottom: 15px;
 }
 
+/* descrição */
 .produto p {
-    margin-bottom: 50px;
+    margin: 10px 0;
+    font-size: 15px;
+    text-align: center;
+    color: #333;
+    flex-grow: 1; /* ocupa espaço e empurra pagamento pra baixo */
 }
 
+/* formas de pagamento */
 .formas-de-pagamento {
     display: flex;
+    flex-direction: column; /* deixa pix/cartão em coluna */
+    align-items: center;
+    gap: 8px;
 }
 
 .formas-de-pagamento svg {
-    height: 35px;
-    width: 35px;
-    margin: 10px;
+    height: 28px;
+    width: 28px;
+    margin: 5px;
+    fill: #444;
 }
 
 .formas-de-pagamento h3 {
-    margin: 10px;
+    margin: 0;
+    font-size: 13px;
+    text-align: center;
+    color: #555;
 }
+
 /*_____________________________________________*/
 
