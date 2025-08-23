@@ -12,7 +12,7 @@ function Header() {
   };
 
   return (
-    <header className="header-container">
+    <header className="header-container justify-content-center align-items-center">
       <section className="section-1">
         <div className="logo">
           <img className="imagem" src={logo} alt="logo" />

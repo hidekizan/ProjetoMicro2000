@@ -6,41 +6,25 @@ import Solucoes from "../pages/Solucoes";
 import Login from "../pages/Login";
 import Cadastro from "../pages/Cadastro";
 import Servicos from "../pages/Servicos";
-import LayoutPadrao from "../app/LayoutPadrao";
+import LayoutPadrao from "./LayoutPadrao.jsx";
 import Rafael from "../pages/Produto/Rafael";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-
-        {/* Rotas que usam Header e Footer */}
-        <Route element={<LayoutPadrao />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/sobre" element={<Sobre />} />
-          <Route path="/suporte" element={<Suporte />} />
-          <Route path="/solucoes" element={<Solucoes />} />
-          <Route path="/servicos" element={<Servicos />} />
-        </Route>
-
-        {/* Rotas sem Header e Footer */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/cadastro" element={<Cadastro />} />
-
-      </Routes>
-      <div className="Content flex min-h-screen flex-col">
+      <div className="Content flex min-h-screen flex-col position: relative;">
         <Header/>
-        <main className="flex flex-grow container mx-auto p-4 mt-[100px]">
-          <Routes>
+        <main className="flex flex-grow w-full p-0 justify-center">
+        <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/suporte" element={<Suporte />} />
             <Route path="/solucoes" element={<Solucoes />} />
-            <Route path="/painel" element={
-              <PrivateRoute>
-                <Painel />
-              </PrivateRoute>
-            } />
+
             <Route path="/servicos" element={<Servicos />} />
             <Route path="/produtos" element={<Rafael />} />
             <Route path="/painel" element={
