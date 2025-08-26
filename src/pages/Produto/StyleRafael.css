@@ -157,9 +157,9 @@
 .area-filtro {
     display: flex;
     flex-direction: column;
-    height: 100vh;       /* altura máxima da viewport */
+    height: 100vh;
     width: 100%;
-    overflow-y: auto;    /* barra de rolagem vertical se ultrapassar altura */
+    overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #838383 #d3d3d3;
     padding: 10px;
@@ -191,9 +191,9 @@
 }
 
 .filtro-produtos .conteudo label {
-  display: block;       /* cada label em linha própria */
-  text-align: left;     /* texto alinhado à esquerda */
-  margin: 0;            /* sem margem que afaste */
+  display: block;
+  text-align: left;
+  margin: 0;
   padding: 2px 0;
 }
 
@@ -330,7 +330,7 @@
 .produto img {
     width: 100%;
     height: 200px;
-    object-fit: cover; /* mantém proporção */
+    object-fit: cover; 
     margin-bottom: 15px;
 }
 
