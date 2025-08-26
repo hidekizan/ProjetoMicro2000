@@ -305,7 +305,7 @@
 .produtos {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px; /* reduzi um pouco pra ficar mais coeso */
+    gap: 40px;
     justify-content: center;
 }
 
@@ -313,7 +313,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* distribui melhor */
+    justify-content: space-between;
     height: 420px;
     width: 280px;
     background-color: #fff;
@@ -341,13 +341,13 @@
     font-size: 15px;
     text-align: center;
     color: #333;
-    flex-grow: 1; /* ocupa espaço e empurra pagamento pra baixo */
+    flex-grow: 1;
 }
 
 /* formas de pagamento */
 .formas-de-pagamento {
     display: flex;
-    flex-direction: column; /* deixa pix/cartão em coluna */
+    flex-direction: column;
     align-items: center;
     gap: 8px;
 }
