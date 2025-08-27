@@ -2,27 +2,21 @@ import Header from "../Header/index";
 import Footer from "../Footer/index";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
-import Sobre from "../pages/Sobre";
-import Suporte from "../pages/Suporte";
-import Solucoes from "../pages/Solucoes";
+import Suporte from "../pages/Contato";
 import Login from "../pages/Login";
 import Servicos from "../pages/Servicos";
 import Cadastro from "../pages/Cadastro";
 import Rafael from "../pages/Produto/Rafael";
 
 function App() {
-  
-  
   return (
     <BrowserRouter>
       <div className="Content flex min-h-screen flex-col">
         <Header/>
-        <main className="flex flex-grow container mx-auto p-4 mt-[100px]">
+        <main className="w-full mt-[100px] mb-[20px] flex-grow p-0 justify-center">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/sobre" element={<Sobre />} />
-            <Route path="/suporte" element={<Suporte />} />
-            <Route path="/solucoes" element={<Solucoes />} />
+            <Route path="/contato" element={<Suporte />} />
             <Route path="/servicos" element={<Servicos />} />
             <Route path="/produtos" element={<Rafael />} />
             <Route path="/painel" element={
@@ -40,5 +34,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
 export default App;

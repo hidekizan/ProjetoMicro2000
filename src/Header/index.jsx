@@ -1,61 +1,47 @@
-// src/components/Header.tsx
-
-import { Menu, User, Phone } from "lucide-react";
-import micro2000Logo from "../components/imagens/logo-micro2000.png";
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import styles from './Header.module.css';
+import logo from '../components/imagens/logo-micro2000.png';
+import { Home, Wrench, MessageCircle, User } from "lucide-react";
 
 const Header = () => {
-  const navigation = [
-    { name: "Home" },
-    { name: "Serviços" },
-    { name: "Sobre" },
-    { name: "Soluções" },
-    { name: "Suporte" },
-  ];
+  const navigate = useNavigate(); // hook do React Router
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-md">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-3 group cursor-pointer">
-            <img
-              src={micro2000Logo}
-              alt="MICRO2000"
-              className="h-8 w-auto transition-transform duration-300 group-hover:scale-105"
-            />
-            <span className="text-lg font-bold text-primary tracking-wide">
-              MICRO2000
-            </span>
+    <nav className={styles.headerNav}>
+      <div className={styles.headerContainer}>
+
+      <div className={styles.headerLeft}>
+
+          <a href="/" className={styles.headerLogo}>
+          <img src={logo} alt="Logo Micro2000"/>
+          </a>
+
+          <div className={styles.headerNavigation}>
+          <Link to="/" className={styles.navItem}>
+            <Home size={18} /> <span>Home</span>
+          </Link>
+          <Link to="/servicos" className={styles.navItem}>
+            <Wrench size={18} /> <span>Serviços</span>
+          </Link>
+          <Link to="/contato" className={styles.navItem}>
+            <MessageCircle size={18} /> <span>Contato</span>
+          </Link>
           </div>
 
-          {/* Navigation */}
-          <div className="hidden md:flex items-center space-x-12">
-            {navigation.map((item) => (
-              <span
-                key={item.name}
-                className="text-sm font-medium transition duration-200 hover:text-primary hover:border-b-2 hover:border-primary pb-1 cursor-pointer"
-              >
-                {item.name}
-              </span>
-            ))}
-          </div>
-
-          {/* Botão */}
-          <div className="hidden md:flex items-center space-x-4">
-            <button className="flex items-center px-4 py-2 border rounded-lg text-sm font-medium hover:bg-muted transition">
-              <User className="h-4 w-4 mr-2" />
-              Cadastrar
-            </button>
-            <button className="px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium hover:opacity-90 transition">
-              Entrar
-            </button>
-            <button className="flex items-center px-4 py-2 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-red-500 to-red-700 hover:opacity-90 transition">
-              <Phone className="h-4 w-4 mr-2" />
-              Contato
-            </button>
-          </div>
-        </div>
       </div>
+        <div className={styles.headerButtons}>
+<button
+  className={styles.btnPrimary}
+  onClick={() => navigate('/login')}
+>
+  <User size={18} /> <span>Acesse sua conta</span>
+</button>
+        </div>
+
+      </div>
+
+      <div className={styles.headerDivider}></div>
     </nav>
   );
 };

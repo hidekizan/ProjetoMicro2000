@@ -1,0 +1,514 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto; /* centraliza horizontalmente */
+  padding: 0 15px;
+}
+
+/* Texto centralizado */
+.textCenter {
+  text-align: center;
+}
+
+/* H1 */
+.hero {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #4a90e2, #0077cc);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Grid de serviços */
+.grid {
+-columns: 1fr; /* mobile padrão 1 coluna */
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr; /* 2 colunas tablets e desktops */
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas grandes */
+  }
+}
+
+/* Card de serviço */
+.serviceCard {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.serviceCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+.serviceHeader h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.serviceHeader p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.serviceFeatures h4,
+.serviceBrands h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.serviceFeatures ul {
+  list-style: none;
+}
+
+.serviceFeatures li {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.serviceBrands span {
+  display: inline-block;
+  background: #e6f2ff;
+  color: #0077cc;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  margin: 3px;
+}
+
+.serviceFooter {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.serviceFooter .info span {
+  font-size: 0.85rem;
+  color: #666;
+  margin-right: 15px;
+}
+
+/* Botões */
+.btnPrimary {
+  background: #0077cc;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+}
+
+/* Process Section */
+.process {
+  padding: 60px 20px;
+  background: #f0f0f0;
+}
+
+.process h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.process p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.processSteps {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.step {
+  text-align: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.stepNumber {
+  width: 50px;
+  height: 50px;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-weight: bold;
+}
+
+/* CTA Section */
+.cta {
+  padding: 60px 20px;
+  background: #0077cc;
+  color: #fff;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnLight,
+.btnOutline {
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btnLight {
+  background: #fff;
+  color: #0077cc;
+}
+
+.btnLight:hover {
+  background: #f5f5f5;
+}
+
+.btnOutline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btnOutline:hover {
+  background: #fff;
+  color: #0077cc;
+}
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto; /* centraliza horizontalmente */
+  padding: 0 15px;
+}
+
+/* Texto centralizado */
+.textCenter {
+  text-align: center;
+}
+
+/* Hero */
+.hero {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #4a90e2, #0077cc);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Services */
+.services {
+  padding: 60px 20px;
+}
+
+/* Grid de serviços */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr; /* mobile padrão 1 coluna */
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr; /* 2 colunas tablets e desktops */
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 3 colunas em telas grandes */
+  }
+}
+
+/* Card de serviço */
+.serviceCard {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+.serviceHeader h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.serviceHeader p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.serviceFeatures h4,
+.serviceBrands h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.serviceFeatures ul {
+  list-style: none;
+}
+
+.serviceFeatures li {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.serviceBrands span {
+  display: inline-block;
+  background: #e6f2ff;
+  color: #0077cc;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  margin: 3px;
+}
+
+.serviceFooter {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.serviceFooter .info span {
+  font-size: 0.85rem;
+  color: #666;
+  margin-right: 15px;
+}
+
+/* Botões */
+.btnPrimary {
+  background: #0077cc;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+}
+
+/* Process Section */
+.process {
+  padding: 60px 20px;
+  background: #f0f0f0;
+}
+
+.process h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.process p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.processSteps {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.step {
+  text-align: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.stepNumber {
+  width: 50px;
+  height: 50px;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-weight: bold;
+}
+
+/* CTA Section */
+.cta {
+  padding: 60px 20px;
+  background: #0077cc;
+  color: #fff;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnLight,
+.btnOutline {
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btnLight {
+  background: #fff;
+  color: #0077cc;
+}
+
+.btnLight:hover {
+  background: #f5f5f5;
+}
+
+.btnOutline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btnOutline:hover {
+  background: #fff;
+  color: #0077cc;
+}
