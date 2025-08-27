@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "../pagescss/Login.css"; // importa seu CSS
+import { useState } from "react";
+
 
 const Login = () => {
+  const [email, setEmail] = useState(""); 
+  const [senha, setSenha] = useState(""); 
+
+
+  function handleSubmit(event) {
+  
+    event.preventDefault();
+    // Lógica de autenticação aqui
+    axios.post("http://localhost:3000/login", {email, senha});
+
+  }
+
   return (
     <div className="body-login">
       <main>
