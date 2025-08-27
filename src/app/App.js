@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Servicos from "../pages/Servicos";
 import Cadastro from "../pages/Cadastro";
 import Rafael from "../pages/Produto/Rafael";
+import ProdutoDetalhe from "../pages/Produto/ProdutoDetalhe";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/contato" element={<Suporte />} />
             <Route path="/servicos" element={<Servicos />} />
             <Route path="/produtos" element={<Rafael />} />
+            <Route path="/produtos/:id" element={<ProdutoDetalhe />} />
             <Route path="/painel" element={
               {/*<PrivateRoute>
                 <Painel />

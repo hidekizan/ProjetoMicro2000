@@ -1,5 +1,4 @@
 /*Menu _______________________________________Aqui*/
-
 .barra-do-menu {
     margin: 0px 0px 100px 0px;
     width: 100%;
@@ -23,7 +22,7 @@
     margin-top: 50px;
     border-radius: 5px;
     height: 50px;
-    width: 30%;
+    width: 500px;
     background: linear-gradient(135deg, #04179B, #0125BA, #0085F1);
     display: flex;
     align-items: center;
@@ -158,9 +157,9 @@
 .area-filtro {
     display: flex;
     flex-direction: column;
-    height: 100vh;       /* altura máxima da viewport */
+    height: 100vh;
     width: 100%;
-    overflow-y: auto;    /* barra de rolagem vertical se ultrapassar altura */
+    overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #838383 #d3d3d3;
     padding: 10px;
@@ -192,9 +191,9 @@
 }
 
 .filtro-produtos .conteudo label {
-  display: block;       /* cada label em linha própria */
-  text-align: left;     /* texto alinhado à esquerda */
-  margin: 0;            /* sem margem que afaste */
+  display: block;
+  text-align: left;
+  margin: 0;
   padding: 2px 0;
 }
 
@@ -297,58 +296,74 @@
     padding: 50px;
     display: flex;
     height: 100%;
-    width: 100%;
+    width: 1300px;
     background-color: #d3d3d3;
-    gap: 20px;
     justify-content: center;
-    margin: 0;
-    position: relative;
+    margin-top: 50px;
 }
 
 .produtos {
     display: flex;
-    gap: 50px;
     flex-wrap: wrap;
-    align-items: center;
+    gap: 40px;
     justify-content: center;
 }
 
 .produto {
     display: flex;
     flex-direction: column;
-    height: 400px;
-    width: 300px;
-    background-color: rgb(255, 255, 255);
-    padding: 40px;
-
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    height: 420px;
+    width: 280px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
 }
 
+.produto:hover {
+    transform: scale(1.03); /* efeito hover */
+}
 
-
+/* imagens padronizadas */
 .produto img {
-    width: 200px;
-    height: 250px;
-    margin-bottom: 50px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    margin-bottom: 15px;
 }
 
+/* descrição */
 .produto p {
-    margin-bottom: 50px;
+    margin: 10px 0;
+    font-size: 15px;
+    text-align: center;
+    color: #333;
+    flex-grow: 1;
 }
 
+/* formas de pagamento */
 .formas-de-pagamento {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
 .formas-de-pagamento svg {
-    height: 35px;
-    width: 35px;
-    margin: 10px;
+    height: 28px;
+    width: 28px;
+    margin: 5px;
+    fill: #444;
 }
 
 .formas-de-pagamento h3 {
-    margin: 10px;
+    margin: 0;
+    font-size: 13px;
+    text-align: center;
+    color: #555;
 }
+
 /*_____________________________________________*/
 
