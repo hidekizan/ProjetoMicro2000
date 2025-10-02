@@ -1,16 +1,24 @@
 import { Link } from "react-router-dom";
 import './StyleRafael.css';
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 function Rafael () {
     const produtos = [
         { id: 1, img: "/imgprodutos/monitor01.jpg", nomeproduto: "Nome dos produtos", dinheiro: "R$ 500,00", cartao: "R$ 550,00" },
-    { id: 2, img: "/imgprodutos/monitor02.jpg", nomeproduto: "Nome dos produtos", dinheiro: "R$ 600,00", cartao: "R$ 660,00" },
-    { id: 3, img: "/imgprodutos/mouse-branco-01.jpg", nomeproduto: "Nome dos produtos", dinheiro: "R$ 120,00", cartao: "R$ 132,00" },
-    { id: 4, img: "/imgprodutos/tecladoGamer01.png", nomeproduto: "Nome dos produtos", dinheiro: "R$ 300,00", cartao: "R$ 330,00" },
-    { id: 5, img: "/imgprodutos/tecladoGamer02.png", nomeproduto: "Nome dos produtos", dinheiro: "R$ 350,00", cartao: "R$ 385,00" },
-    { id: 6, img: "/imgprodutos/tecladoGamerVerde01.png", nomeproduto: "Nome dos produtos", dinheiro: "R$ 400,00", cartao: "R$ 440,00" },
+        { id: 2, img: "/imgprodutos/monitor02.jpg", nomeproduto: "Nome dos produtos", dinheiro: "R$ 600,00", cartao: "R$ 660,00" },
+        { id: 3, img: "/imgprodutos/mouse-branco-01.jpg", nomeproduto: "Nome dos produtos", dinheiro: "R$ 120,00", cartao: "R$ 132,00" },
+        { id: 4, img: "/imgprodutos/tecladoGamer01.png", nomeproduto: "Nome dos produtos", dinheiro: "R$ 300,00", cartao: "R$ 330,00" },
+        { id: 5, img: "/imgprodutos/tecladoGamer02.png", nomeproduto: "Nome dos produtos", dinheiro: "R$ 350,00", cartao: "R$ 385,00" },
+        { id: 6, img: "/imgprodutos/tecladoGamerVerde01.png", nomeproduto: "Nome dos produtos", dinheiro: "R$ 400,00", cartao: "R$ 440,00" },
       ];
+    //__________________________________________________________________
+
+    
+    //funcionalidade do slider!!!!!!!!!!
+    
+    //__________________________________________________________________
+    
+    
     
     //rolagem de produtos
     const produtosPorPagina = 4; // quantos produtos mostrar por página
@@ -23,6 +31,7 @@ function Rafael () {
     const produtosAtuais = produtos.slice(indicePrimeiro, indiceUltimo);
       
     const totalPaginas = Math.ceil(produtos.length / produtosPorPagina);
+    //____________________________________________________________________
       
     
     return (
@@ -160,8 +169,7 @@ function Rafael () {
                             <button
                                 key={i + 1}
                                 onClick={() => setPaginaAtual(i + 1)}
-                                className={paginaAtual === i + 1 ? "ativo" : ""}
-                            >
+                                className={paginaAtual === i + 1 ? "ativo" : ""}>
                                 {i + 1}
                             </button>
                             ))}
